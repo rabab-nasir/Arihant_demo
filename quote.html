@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Custom Quote | B2B Wholesale Pricing | Arihant Packaging</title>
+    <meta name="description" content="Request a bespoke B2B quotation for custom boxes, rigid gift boxes, paper bags, or e-commerce mailers. Submit dimensions, quantities, and logo designs.">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- --- PREMIUM NAVIGATION BAR --- -->
+    <header class="header-main header-scrolled">
+        <div class="container header-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/images/logo.jpg" alt="Arihant Packaging Logo" class="logo-img">
+                <span class="logo-text">ARIHANT PACKAGING</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="index.html#industries" class="nav-link">Industries</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="quote.html" class="btn btn-gold btn-sm">Request Quote</a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- PAGE INTRO BANNER --- -->
+    <section class="page-intro text-center">
+        <div class="container reveal-up in-view">
+            <h1 class="page-intro-title font-serif">Request Bespoke Quotation</h1>
+            <p class="page-intro-subtitle">Configure your custom packaging requirements below. Our design engineers will verify dielines and submit wholesale rate cards.</p>
+        </div>
+    </section>
+
+    <!-- --- FORM INTERACTIVE AREA --- -->
+    <main class="py-5 quote-page-wrapper">
+        <div class="container">
+            <div class="quote-intro-text reveal-up in-view">
+                <p class="text-muted" style="font-size: 1.05rem; font-weight: 300;">We construct fully tailored, private-label box dimensions and paper bags. Our production facilities maintain standard MOQ thresholds based on construction difficulty (e.g. 500 units for Rigid boxes, 1000 units for mailers/bags). Complete the B2B configuration sheet below.</p>
+            </div>
+
+            <div class="quote-form-container reveal-up in-view">
+                <form id="b2b-quote-form" class="form-grid">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="quote-name" class="form-label">Procurement Officer Name <span>*</span></label>
+                        <input type="text" id="quote-name" class="form-control" placeholder="John Doe" required autocomplete="name">
+                    </div>
+
+                    <!-- Company -->
+                    <div class="form-group">
+                        <label for="quote-company" class="form-label">Corporate Entity Name <span>*</span></label>
+                        <input type="text" id="quote-company" class="form-control" placeholder="Acme Corporation" required autocomplete="organization">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="quote-email" class="form-label">Work Email Address <span>*</span></label>
+                        <input type="email" id="quote-email" class="form-control" placeholder="procurement@acme.com" required autocomplete="email">
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="quote-phone" class="form-label">Helpline Contact Number <span>*</span></label>
+                        <input type="tel" id="quote-phone" class="form-control" placeholder="+91 99999 99999" required autocomplete="tel">
+                    </div>
+
+                    <!-- Category Select -->
+                    <div class="form-group">
+                        <label for="quote-product" class="form-label">Packaging Category Select <span>*</span></label>
+                        <select id="quote-product" class="form-control" required>
+                            <!-- Automatically loaded from products-data.js -->
+                            <option value="" disabled selected>-- Loading Categories --</option>
+                        </select>
+                        <span class="moq-hint" id="moq-hint-label">Please select a product category to see wholesale recommendations.</span>
+                    </div>
+
+                    <!-- Order Quantity -->
+                    <div class="form-group">
+                        <label for="quote-qty" class="form-label">Estimated Batch Quantity <span>*</span></label>
+                        <select id="quote-qty" class="form-control" required>
+                            <option value="" disabled selected>-- Select Quantity Bracket --</option>
+                            <option value="500">500 Units (Min. Rigid Gift)</option>
+                            <option value="1000">1,000 Units (Recommended wholesale)</option>
+                            <option value="2000">2,000 Units</option>
+                            <option value="5000">5,000 Units (Bulk discounts apply)</option>
+                            <option value="10000">10,000+ Units (Enterprise pricing)</option>
+                        </select>
+                    </div>
+
+                    <!-- Tech specs detailed description -->
+                    <div class="form-group form-full-width">
+                        <label for="quote-specs" class="form-label">Technical Parameters & Finishes</label>
+                        <textarea id="quote-specs" class="form-control" placeholder="Specify targeted dimensions (Length x Width x Height), cardboard thickness, spot coating preferences (matte/gloss/foil), print colors, interior foam dividers, etc."></textarea>
+                    </div>
+
+                    <!-- Drag & Drop mockup file upload -->
+                    <div class="form-group form-full-width">
+                        <label class="form-label">Upload Vector Logo / Dieline Art</label>
+                        <div class="file-upload-wrapper">
+                            <span class="file-upload-icon">📂</span>
+                            <span class="file-upload-text">Drag and drop your print files here or <strong>browse local folders</strong></span>
+                            <input type="file" class="file-upload-input" id="quote-file" accept=".pdf,.ai,.eps,.jpg,.png">
+                            <span class="moq-hint" style="text-align: center; margin-top: 0.5rem;">Accepted formats: Vector PDF, Adobe Illustrator (.ai), EPS, high-res PNG/JPG (Max. 20MB)</span>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-full-width quote-submit-btn-wrapper">
+                        <button type="submit" class="btn btn-gold btn-lg">Transmit B2B Pricing Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- --- FOOTER --- -->
+    <footer class="footer-main">
+        <div class="container footer-grid">
+            <div class="footer-column-logo">
+                <a href="index.html" class="logo-wrapper">
+                    <img src="assets/images/logo.jpg" alt="Arihant Packaging Logo" class="logo-img">
+                    <span class="logo-text">ARIHANT PACKAGING</span>
+                </a>
+                <p class="footer-about-text">Modern custom packaging manufacturer specializing in rigid boxes, custom bags, e-commerce shippers, and food-safe paper wraps. Supporting D2C and retail brands with high-fidelity corporate print solutions.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/arihantpackaging_/?hl=en" target="_blank" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-column-title">Categories</h4>
+                <ul class="footer-links-list">
+                    <li><a href="products.html?category=hampers-baskets">Hampers & Baskets</a></li>
+                    <li><a href="products.html?category=wedding-essentials">Wedding Essentials</a></li>
+                    <li><a href="products.html?category=premium-containers">Premium Containers</a></li>
+                    <li><a href="products.html?category=packaging-supplies">Packaging Supplies</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-column-title">Quick Links</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="index.html#industries">Industries We Serve</a></li>
+                    <li><a href="about.html">About Company</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="quote.html">B2B Quotation Form</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-column-title">B2B Headquarters</h4>
+                <div class="footer-contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div class="contact-text">
+                        <strong>Factory Address</strong>
+                        1527, Shukrawar Peth,<br>Near Police Station, Pune 411002
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div class="contact-text">
+                        <strong>Email Communications</strong>
+                        <a href="mailto:info@arihantpackaging.com">info@arihantpackaging.com</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div class="contact-text">
+                        <strong>Procurement Helpline</strong>
+                        <a href="tel:+919999999999">+91 99999 99999</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Arihant Packaging. All rights reserved. Custom high-end wholesale manufacturing.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">B2B Standard Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- --- JS SCRIPTS --- -->
+    <script src="assets/js/products-data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
