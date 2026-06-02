@@ -2197,6 +2197,94 @@ textarea.form-control {
     .form-full-width { grid-column: span 1; }
     .quote-submit-btn-wrapper .btn { width: 100%; }
     
+    /* Product Detail Page Mobile Adjustments */
+    .main-image-wrapper {
+        height: 280px !important;
+        padding: 1rem !important;
+    }
+    .detail-main-image {
+        max-height: 100% !important;
+    }
+    .detail-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+    .detail-tagline {
+        font-size: 1.15rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .detail-description-block {
+        font-size: 0.95rem !important;
+        margin-bottom: 1.5rem !important;
+        line-height: 1.6 !important;
+    }
+    .detail-highlights {
+        margin-bottom: 2rem !important;
+    }
+    .action-buttons-group {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    .action-buttons-group .btn {
+        width: 100% !important;
+    }
+    .specs-table td {
+        padding: 1rem !important;
+        font-size: 0.85rem !important;
+    }
+    .spec-label {
+        width: 40% !important;
+    }
+    .detail-specs-section, .related-products-section {
+        margin-top: 3.5rem !important;
+        padding-top: 3rem !important;
+    }
+
+    /* Product Page Swipable Filter Tabs */
+    .filter-tabs-wrapper {
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        flex-wrap: nowrap !important;
+        padding: 0.5rem 1.5rem 1.5rem 1.5rem !important;
+        margin-top: -1.2rem !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        -ms-overflow-style: none !important;  /* IE and Edge */
+        scrollbar-width: none !important;  /* Firefox */
+    }
+    .filter-tabs-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+    .filter-tab {
+        flex: 0 0 auto !important;
+        scroll-snap-align: start !important;
+        font-size: 0.75rem !important;
+        padding: 0.6rem 1.2rem !important;
+    }
+
+    /* About Page Mobile Alignments */
+    .about-intro-text {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-top: 2rem !important;
+    }
+
+    /* Contact Page Mobile Overrides */
+    .contact-info-panel, .contact-form-wrapper {
+        padding: 2rem !important;
+    }
+    .contact-info-title {
+        font-size: 1.8rem !important;
+    }
+    .contact-channels-list {
+        margin-bottom: 2rem !important;
+    }
+    .map-wrapper {
+        height: 300px !important;
+    }
+
     /* Footer */
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
     .footer-grid .footer-column-logo { grid-column: span 1; }
